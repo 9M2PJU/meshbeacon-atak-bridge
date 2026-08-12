@@ -1,0 +1,12 @@
+services:
+  atak-bridge:
+    build: .
+    restart: unless-stopped
+    environment:
+      # Connect to the MeshBeacon mosquitto broker
+      - MQTT_BROKER=meshbeacon-mqtt-server-1 # adjust to your actual mqtt container name or IP
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=hub/event
+      # Send to ATAK Multicast or specific TAK Server IP
+      - ATAK_IP=239.2.3.1
+      - ATAK_PORT=4242
