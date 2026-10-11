@@ -28,3 +28,9 @@ docker compose up -d
 
 ## How it works
 This bridge subscribes to `hub/event`. When MeshBeacon's radios (ClusterDuck/MamaDuck) send GPS data, the bridge parses the `lat` and `lon` fields. It immediately constructs an ATAK `<event>` with `type="a-f-G-U-C"` (friendly ground unit), injects the callsign, and fires it over UDP so it appears live on commanders' maps in the field.
+
+## Support
+
+If you find this project useful, please consider supporting it:
+
+[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=9m2pju%40hamradio.my&currency_code=MYR&item_name=meshbeacon-atak-bridge)
